@@ -1,0 +1,346 @@
+/*
+Project:  Project 5
+Name: Henry Clyde
+Submitted: 8/8/24
+ 
+I declare that the following source code was written by me, or provided
+by the instructor for this project. I understand that copying source
+code from any other source, providing source code to another student, 
+or leaving my code on a public web site constitutes cheating.
+I acknowledge that  If I am found in violation of this policy this may result
+in a zero grade, a permanent record on file and possibly immediate failure of the class.
+
+I fixed the margin and padding on a few sections and elements for this project, to finish cleaning up some of the code.
+*/
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: system-ui, Arial, sans-serif;
+    display: grid;
+    grid-template-rows: 100px auto 60px;
+    grid-template-columns: 1fr;
+    grid-template-areas: 
+        "header"
+        "main"
+        "footer";
+    min-height: 100vh;
+    color: rgb(227, 227, 227);
+    overflow-y: auto;
+
+}
+
+a:hover, a {
+    color: rgb(227, 227, 227);
+    text-decoration: underline; 
+}
+
+h2,h3,h4,h5,h6 {
+    padding-bottom: 1.5rem;
+    text-decoration: underline;
+}
+
+.site-title {
+    display:flex;
+    justify-content: space-between;
+    gap: 0.5rem;
+}
+
+@keyframes title {
+    0%      {color: rgb(85, 223, 205);}
+    25%     {color: rgb(174, 105, 240);}
+    50%     {color: rgb(229, 252, 151);}
+    100%    {color: rgb(85, 223, 205);}
+}
+
+.site-title h1 {
+    animation-name: title;
+    animation-duration: 4s;
+    animation-iteration-count: infinite;
+}
+
+.header {
+    grid-area: header;
+    background: #030508;
+    color: rgb(227, 227, 227);
+    text-align: center;
+    padding: 1rem 4rem;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    justify-content:space-between;
+
+}
+#resume embed {
+    width: 100%;
+    height: 100%;
+}
+.nav {
+    grid-area: nav;
+    color: rgb(227, 227, 227);
+    padding: 1rem;
+}
+
+.nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+}
+
+.nav a {
+    color: rgb(227, 227, 227);
+    text-decoration: none;
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+}
+
+.nav a:hover {
+    background: #324671;
+}
+
+#hero {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+#projects a:visited {
+    text-decoration: none;
+}
+
+#homeTitle {
+    font-size: 3rem;
+    padding: 1rem 0;
+    background: linear-gradient(45deg, #78f3f3, #af4297);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
+    -webkit-text-fill-color: transparent; 
+    -moz-text-fill-color: transparent;
+}
+
+#heroCoding {
+    width: 100%;
+    max-width: 800px;
+}
+
+#contactFlex {
+    display: flex;
+    justify-content: start;
+    gap: 7%;
+}
+
+#contactFlex a {
+    background-color: rgb(73, 73, 183);
+    padding: 0.5rem 2rem;
+    border-radius:0.5rem
+}
+
+
+#phone-booth {
+    width: 100%;
+    max-width: 600px;
+}
+
+section {
+    background: #263047;
+    font-size: 1.5rem;
+    padding: 4rem 20% 10rem;
+    margin: 0;
+    margin-bottom: 5rem;  
+    height: 100%;
+
+}
+
+#projects img {
+    margin: 2rem 0;
+}
+
+#projects a {
+    font-size: 2rem;
+}
+
+.footer {
+    grid-area: footer;
+    background: #030508;
+    color: white;
+    text-align: center;
+    padding: 1rem;
+    height: 200px;
+    margin-top: auto;
+}
+
+.footer button {
+    background-color: rgb(24, 24, 24);
+    color: white;
+    font-size: 1rem;
+    margin-top: 2rem;
+    padding: 1rem 2rem;
+    border-radius:0.4rem;
+    border-color: white;
+}
+.footer button:hover {
+    background-color: rgb(55, 55, 55);
+}
+
+
+@media (max-width: 768px) {
+    .main {
+        grid-template-columns: 1fr;
+    }
+
+    .header {
+        padding: 1rem;
+        flex-direction: column;
+    }
+
+    .nav ul {
+        flex-direction: row;
+        gap: 0.5rem;
+        margin-bottom: 1rem;
+    }
+
+    #homeTitle {
+        font-size: 1.5rem;
+    }
+
+    #heroCoding {
+        max-width: 100%;
+    }
+
+    #contactFlex {
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+    section {
+        padding: 2rem;
+        font-size: 1rem;
+        margin: 1rem 0;
+    }
+
+    .footer button {
+        padding: 0.5rem 1rem;
+        margin-top: 1rem;
+    
+    }
+    body {
+        grid-template-rows: auto auto 60px;
+        grid-template-columns: 1fr;
+        grid-template-areas: 
+            "header"
+            "main"
+            "footer";
+        min-height: 100vh;
+        overflow-y: auto;
+    
+    }
+    #projects img {
+        max-width: 100%;
+    }
+    #resume embed {
+        width: 100%;
+        height: 100%;
+    }
+}
+
+form {
+    max-width: 80%;
+    margin: auto;
+    padding: 20px;
+    border-radius: 5px;
+}
+
+form .flex {
+    display: flex;
+    flex-wrap: wrap;
+    list-style-type: none;
+    justify-content: start;
+    gap: 1rem;
+}
+
+form li {
+    margin-bottom: 1rem;
+    margin-right: 1.5rem;
+    flex-grow: 1;
+}
+
+label {
+    display: block;
+    margin-bottom: 0.2rem;
+    font-weight: bold;
+}
+
+.break {
+    flex-basis: 100%;
+    height: 0;
+}
+
+.bigger {
+    flex-grow: 1;
+}
+.smaller {
+
+    flex-grow: 1;
+    flex-basis: 10%;
+}
+
+
+input[type="text"], textarea {
+    width: 100%;
+    padding: 0.8rem;
+    box-sizing: border-box;
+    border: 1px solid #ccc;
+    border-radius: 2px;
+}
+
+button {
+    padding: 1rem 3rem;
+    background-color: #943400;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 1.2rem;
+}
+
+button:hover {
+    background-color: #7d2c00;
+}
+
+.errorMsg {
+    color: rgb(203, 0, 0);
+    font-size: 0.9em;
+    margin-top: 5px;
+}
+
+.successMsg {
+    color: green;
+    font-size: 1.1em;
+    margin-bottom: 15px;
+}
+
+
+input.was-validated:invalid {
+    color: rgb(174, 0, 0);
+    border: 3px solid rgb(145, 0, 0);
+}
+  
+input.was-validated:invalid ~ div {
+    display: block;
+}
+
+/* Hide all error divs by default */
+input:valid ~ div {
+    display: none;
+}
+
+input:invalid ~ div {
+    display: none;
+}

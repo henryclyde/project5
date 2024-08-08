@@ -1,0 +1,214 @@
+<!-- 
+Project:  Project 5
+Name: Henry Clyde
+Submitted: 8/8/24
+ 
+I declare that the following source code was written by me, or provided
+by the instructor for this project. I understand that copying source
+code from any other source, providing source code to another student, 
+or leaving my code on a public web site constitutes cheating.
+I acknowledge that  If I am found in violation of this policy this may result
+in a zero grade, a permanent record on file and possibly immediate failure of the class.
+ 
+Reflection (1-2 paragraphs):  This project (along with project 3 and 4), were fun projects for me. It was cool to build something from scratch and keep working on it/coming back to it, to style it and improve it gradually. It now looks like a pretty well polished website, much better than old projects I made that lacked good styling overall. I fixed the margin and padding on a few sections and elements for this project, to finish cleaning up some of the code.
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project 5</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link id="themeLink" rel="stylesheet" href="css/theme.css">
+</head>
+<body>
+    <header class="header">
+        <div class="site-title">
+            <img src="img/code.png" style="width: auto; height:50px; margin: 0;" alt="Development icons created by Bharat Icons - Flaticon">
+            <h1>MyPortfolio</h1>
+        </div>
+        <nav class="nav">
+            <ul>
+                <li><a href="#" onclick="showSection('home')">Home</a></li>
+                <li><a href="#" onclick="showSection('projects')">Projects</a></li>
+                <li><a href="#" onclick="showSection('resume')">Resume</a></li>
+                <li><a href="#" onclick="showSection('contact')">Contact</a></li>
+                <li><a href="#" onclick="showSection('personal')">Personal</a></li>
+                <li><a href="#" onclick="showSection('visitorForm')">Log Visit</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    
+
+    <main class="main">
+        <section id="home">
+            <div class="hero">
+                <div>
+                    <h1 id="homeTitle">Web Development Portfolio</h1>
+                    <h2>Henry Clyde</h2>
+                </div>
+                <div>
+                    <img id="heroCoding" src="img/coding.jpg" alt="Coding picture">
+                </div>
+            </div>
+            <br>
+            <p>Check out current projects I'm working on, or head to the <a href="#" onclick="showSection('contact')">Contact</a> page if you have any questions or want to connect!</p>
+            
+        </section>
+
+        <section id="projects" style="display:none;">
+            <h2>Projects</h2>
+            <p>Some of my recent development projects:</p>
+            <br>
+            <a href="https://henryclyde.github.io/jsCalculator/">iOS Calculator clone</a>
+            <br>
+            <img src="img/calculator.JPG" alt="IOS Calculator clone">
+        </section>
+
+        <section id="resume" style="display:none;">
+            <h2>Resume</h2>
+            <embed src="resume/Henry_Clyde_Resume.pdf" type="application/pdf"/>
+
+        </section>
+        
+        <section id="contact" style="display:none;">
+            <div id="contactFlex">
+                <div>
+                    <img src="img/phonebooth.jpg" alt="Phone Booth" id="phone-booth">
+                </div>
+                <div>  
+                    <h2>Contact</h2>
+                    <br>
+                    <p>Name: Henry Clyde</p>
+                    <p>Email: 10809725@uvu.edu</p>
+                    <p>Phone: (908) 219-9215</p>
+                    <p>Location: Orem, UT</p>
+
+                    <br>
+                    <h2>Profiles:</h2>
+                    <a href="https://www.linkedin.com/in/henry-c-4a2650124/">LinkedIn</a>
+                    <br>
+                    <br>
+                    <a href="https://github.com/henryclyde">Github</a>
+                </div>
+            </div>
+        </section>
+        
+        <section id="personal" style="display:none;">
+            <h2>Personal Interests</h2>
+            <p>I have a big interest in science and technology. I also am fascinated by space. The science of space and time dilation, and the sheer scale of the universe, has always struck me with wonder and amazement. Emerging technologies and what-if's for humanities future also fascinate me. A youtube channel that covers many areas of science, space, and technology, is called Kurzegat. Here's a recent video from them that I find interesting (and scary):</p>
+            <br>
+            <iframe src="http://www.youtube.com/embed/fa8k8IQ1_X0" frameborder="0" style="aspect-ratio: 16 / 9; width: 100%"></iframe>
+        </section>
+
+
+
+
+
+        <section id="visitorForm" style="display:none;">
+            <h1>Visitor Form</h1>
+            
+            <div id="success" class="successMsg" style="display:none">
+                Thank you for logging your visit!
+            </div>
+
+            <form id="myform" novalidate method="GET" action="https://wp.zybooks.com/form-viewer.php">
+                <ul class="flex">
+                    <li class="section-display">
+                        <label for="first-name">First Name</label>
+                        <input type="text" id="first-name" name="first-name">
+                        <div class="errorMsg"></div>
+                    </li>
+                    <li>
+                        <label for="last-name">Last Name</label>
+                        <input type="text" id="last-name" name="last-name">
+                        <div class="errorMsg"></div>
+                    </li>
+                    <div class="break"></div>
+                    <li id="addressItem">
+                        <label for="address">Address</label>
+                        <input type="text" id="address" name="address">
+                        <div class="errorMsg"></div>
+                    </li>
+
+                    <div class="break"></div>
+                    
+                    <li class="bigger">
+                        <label for="city">City</label>
+                        <input type="text" id="city" name="city">
+                        <div class="errorMsg"></div>
+                    </li>
+                    <li class="smaller">
+                        <label for="state">State</label>
+                        <input type="text" id="state" name="state">
+                        <div class="errorMsg"></div>
+                    </li>
+                    <li>
+                        <label for="zip">Zip</label>
+                        <input type="text" id="zip" name="zip">
+                        <div class="errorMsg"></div>
+                    </li>
+
+                    <div class="break"></div>
+                    
+                    <li>
+                        <label for="email">Email</label>
+                        <input type="text" id="email" name="email">
+                        <div class="errorMsg"></div>
+                    </li>
+                    <li>
+                        <label for="phone">Phone</label>
+                        <input type="text" id="phone">
+                        <div class="errorMsg"></div>
+                    </li>
+
+                    <div class="break"></div>
+
+
+                    <li>
+                        <p>How did you find my page?</p>
+                    </li>
+                    <div class="break"></div>
+
+                    <li>
+                        <label for="google">Google Search</label>
+                        <input type="checkbox" id="google" name="find-page" value="google">
+                    </li>
+                    <li>
+                        <label for="friend">Friend</label>
+                        <input type="checkbox" id="friend" name="find-page" value="friend">
+                    </li>
+                    <li>
+                        <label for="newspaper">News Paper</label>
+                        <input type="checkbox" id="newspaper" name="find-page" value="newspaper">
+                        <div class="errorMsg"></div>
+                    </li>
+                    
+                    <div class="break"></div>
+
+
+                    <li>
+                        <label for="comment">Comments</label>
+                        <textarea rows="4" id="comment" placeholder="Enter your comments here"></textarea>
+                    </li>
+                    <div class="break"></div>
+                    
+                    <li>
+                        <button type="submit">Send</button>
+                    </li>
+                </ul>
+            </form>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <p>This website was created by Henry Clyde</p>
+        <button id="themeToggle">Toggle Theme</button>
+    </footer>
+    <script defer src="js/validate.js"></script>
+    <script defer src="js/main.js"></script>
+
+</body>
+</html>
